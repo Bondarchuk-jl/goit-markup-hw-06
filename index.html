@@ -42,12 +42,12 @@
               >
             </li>
             <li class="navigation-item">
-              <a href="./portfolio.html" class="navigation-link link "
+              <a href="./portfolio.html" class="navigation-link link"
                 >Portfolio</a
               >
             </li>
             <li class="navigation-item">
-              <a href="" class="navigation-link link ">Contacts</a>
+              <a href="" class="navigation-link link">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -65,8 +65,6 @@
           </li>
         </ul>
       </div>
-    
-      </div>
     </header>
 
     <main class="hero">
@@ -75,7 +73,9 @@
       <section class="hero-main overlay">
         <div class="container">
           <h1 class="hero-text">Effective Solutions for Your Business</h1>
-          <button type="button" class="hero-buttom" data-modal-open>Order Service</button>
+          <button type="button" class="hero-buttom" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
       <!--Типи технологій-->
@@ -415,51 +415,72 @@
             </li>
           </ul>
         </section>
+        <label for="subscribe">subscribe</label>
+        <input type="email" name="" id="subscribe" placeholder="email" />
+        <button type="submit" class="btn-subscribe">Subscribe</button>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-          <button type="button" class="modal-close" data-modal-close>
-            <svg class="modal-icon" width="8" height="8">
-              <use href="./images/icons.svg#icon-close-black"></use>
-            </svg>
-          </button>
-          <form class="js-speaker-form">
-            <div class="form-name">
-              <!-- form -->
-              <label for="name">
-              <p class="form-text">Name</p>
-              </label> 
-              <svg class="form-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-              </svg>
-              <input type="text" name="user-name" id="name">
-            
-            <label for="tel">
-              <p class="form-text"> Phone</p>
-            </label>
-            <input type="tel" name="tel" id="tel">
 
-            <label for="email" >
-              <p class="form-text"> Email </p>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close" data-modal-close>
+          <svg class="modal-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+        <form class="form js-speaker-form">
+          <p class="form-text-main">
+            Leave your contacts and we will call you back
+          </p>
+          <div class="form-field">
+            <!-- form -->
+            <label for="name">
+              <p class="form-text">Name</p>
             </label>
-            <input type="email" name="email" id="email">
-           </div>
-           <label for="textarea">
-            <p class="form-text"> Comment</p>
-           </label>          <p class="form-text">Text input</p>
-           <textarea name="comment" id="textarea"  rows="10"> </textarea>
-            <!-- checkbox -->
-            <input type="checkbox" name="" value="checkbox" id="checkbox">
-            <label for="checkbox"> 
-              <p class="form-text">I accept the terms and conditions of the 
-                <a href="" class="privat-policy">  Privacy Policy</a> 
-              </p> 
+            <svg class="form-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+            <input type="text" name="user-name" id="name" />
+          </div>
+
+          <div class="form-field">
+            <label for="tel">
+              <p class="form-text">Phone</p>
             </label>
-            <button type="submit" class="form-btn">Send</button>
-          </form>
-          
-        </div>
+            <input type="tel" name="tel" id="tel" />
+          </div>
+          <div class="form-field">
+            <label for="email">
+              <p class="form-text">Email</p>
+            </label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div class="">
+            <label for="textarea">
+              <p class="form-text">Comment</p>
+            </label>
+            <!-- У текстареа неможна залишати навіть пробіл ,
+             інакше не виводиться плейсхолдер -->
+            <textarea
+              name="comment"
+              id="textarea"
+              rows="10"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+          <!-- checkbox -->
+          <div class="">
+            <input type="checkbox" name="" value="checkbox" id="checkbox" />
+            <label for="checkbox">
+              <p class="form-text">
+                I accept the terms and conditions of the
+                <a href="" class="privat-policy"> Privacy Policy</a>
+              </p>
+            </label>
+          </div>
+          <button type="submit" class="form-btn">Send</button>
+        </form>
+      </div>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -469,15 +490,15 @@
     <script>
       (() => {
         document
-          .querySelector('.js-speaker-form')
-          .addEventListener('submit', e => {
-           e.preventDefault();
+          .querySelector(".js-speaker-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
 
             new FormData(e.currentTarget).forEach((value, name) =>
-          console.log(`${name}: ${value}`),
-        );
-      });
-    })();
+              console.log(`${name}: ${value}`)
+            );
+          });
+      })();
     </script>
   </body>
 </html>
