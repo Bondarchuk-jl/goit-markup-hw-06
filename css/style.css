@@ -761,7 +761,7 @@ textarea {
 .app-item:hover .app-text-top {
     transform: translateY(0);
 }
-.form {
+.modal-form {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -772,6 +772,42 @@ textarea {
     
     
 }
+.modal-input {
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
+   width: 360px;
+    height: 40px;
+    
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        margin-bottom: 8px;
+        background-color: transparent;
+        font-size: 16px;
+        color: #2E2F42;
+        padding-left: 38px;
+        
+}
+/*За колір плейсхолдера відповідає нижче, 
+за колір введення відповідає інпут*/
+.modal-input::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: rgba(117, 117, 117, 0.5);
+    /*padding-top: 8px;
+    padding-left: 16px;*/
+}
+.form-textarea {
+    padding-left: 16px;
+    padding-top: 8px;
+}
+.form-textarea::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
 .form-field {
     justify-content: center;
    
@@ -785,7 +821,7 @@ textarea {
     font-weight: 500;
     text-align: center;
     padding-top: 72px;
-    margin-bottom: 34px;
+    margin-bottom: 14px;
     color: #2E2F42;
 }
 
@@ -835,12 +871,14 @@ textarea {
 }
 
 .subscribe-text {
-    align-items: center;
-        text-align: center;
-        letter-spacing: 0.04em;
-    
-        color: #FFFFFF;
-Padding: 8px 24px 8px 24px;
+
+    text-align: center;
+  color: #FFFFFF;
+
+padding-top:8px ;
+padding-bottom: 8px;
+padding-left: 24px;
+  
 }   
 .subscribe-input {
     padding-top: 8px;
@@ -848,17 +886,14 @@ Padding: 8px 24px 8px 24px;
 
 }
 .btn-subscribe {
+    position: relative;
     font-family: inherit;
         font-weight: 500;
         color: var(--main-color);
         letter-spacing: 0.04em;
-        display: flex;
-        margin: 0 auto;
-    
-        padding: 16px 32px;
+       gap: 24px;
         align-items: center;
         justify-content: center;
-    
         background-color: var(--violet-color);
         border-radius: 4px;
         border-color: transparent;
@@ -867,16 +902,19 @@ Padding: 8px 24px 8px 24px;
     border-radius: 4px;
     width: 165px;
     height: 40px;
-    margin-left: 24px;
-    
 }
-.btn-subscribe::after{
-   
-        display: block;
-        content: '';
-      
-}
+
 .btn-subscribe:focus,
 .btn-subscribe:hover {
+
+}
+.subscribe-icon {
+position: absolute;
+top: 0;
+left: 0;
+}
+.subscribe-icon-sp {
+   
+    
 
 }

@@ -416,21 +416,23 @@
           </ul>
         </section>
         <div class="subscribe">
-          <p></p>
-          <label for="subscribe" class="subscribe-text">Subscribe</label>
-          <input
-            type="email"
-            name=""
-            id="subscribe"
-            placeholder="email"
-            class="subscribe-input"
-          />
-          <button type="submit" class="btn-subscribe">
-            Subscribe
-            <svg class="footersoc-icon" width="24" height="24">
-              <use href="./images/icons.svg#icon-telegram"></use>
-            </svg>
-          </button>
+          <p class="subscribe-text">Subscribe</p>
+          <form>
+            <!-- <label for="subscribe"></label> -->
+            <input
+              type="email"
+              name=""
+              id="subscribe"
+              placeholder="email"
+              class="subscribe-input"
+            />
+            <button type="submit" class="btn-subscribe">Subscribe</button>
+            <span class="subscribe-icon-sp">
+              <svg class="subscribe-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-telegram"></use>
+              </svg>
+            </span>
+          </form>
         </div>
       </div>
     </footer>
@@ -442,32 +444,32 @@
             <use href="./images/icons.svg#icon-close-black"></use>
           </svg>
         </button>
-        <form class="form js-speaker-form">
+        <!-- form -->
+        <form class="modal-form js-speaker-form">
           <p class="form-text-main">
             Leave your contacts and we will call you back
           </p>
           <div class="form-field">
-            <!-- form -->
             <label for="name">
               <p class="form-text">Name</p>
             </label>
             <svg class="form-icon" width="24" height="24">
               <use href="./images/icons.svg#icon-instagram"></use>
             </svg>
-            <input type="text" name="user-name" id="name" />
+            <input type="text" name="user-name" id="name" class="modal-input" />
           </div>
 
           <div class="form-field">
             <label for="tel">
               <p class="form-text">Phone</p>
             </label>
-            <input type="tel" name="tel" id="tel" />
+            <input type="tel" name="tel" id="tel" class="modal-input" />
           </div>
           <div class="form-field">
             <label for="email">
               <p class="form-text">Email</p>
             </label>
-            <input type="email" name="email" id="email" />
+            <input type="email" name="email" id="email" class="modal-input" />
           </div>
           <div class="form-field">
             <label for="textarea">
@@ -480,6 +482,7 @@
               id="textarea"
               rows="10"
               placeholder="Text input"
+              class="form-textarea"
             ></textarea>
           </div>
           <!-- checkbox -->
