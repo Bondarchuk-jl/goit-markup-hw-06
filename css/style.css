@@ -797,6 +797,28 @@ textarea {
     /*padding-top: 8px;
     padding-left: 16px;*/
 }
+/* якщо поля не заповнені і далі не пускає то вони не валідні
+.modal-input:valid {
+ background-color: tomato;
+}
+.modal-input:invalid {
+    background-color: green;
+}*/
+/*якщо щось введено як відслідкувати валідацію
+.modal-input:not(:placeholder-shown):valid {
+    color: rgba(117, 117, 117, 0.5);
+}
+.modal-input:not(:placeholder-shown):invalid {
+    background-color: rgba(208, 0, 255, 0.224);
+}*/
+/* якщо на твоєму інпуті не показан плейсхолдер і він не в фокусі і він валідний*/
+.modal-input:not(:placeholder-shown):not(:focus):valid {
+    background-color: rgba(208, 0, 255, 0.224);
+}
+.modal-input:not(:placeholder-shown):not(:focus):invalid {
+    background-color:rgba(28, 180, 53, 0.66);
+}
+
 .form-textarea {
     padding-left: 16px;
     padding-top: 8px;
