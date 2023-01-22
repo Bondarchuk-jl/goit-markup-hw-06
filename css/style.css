@@ -761,6 +761,7 @@ textarea {
 .app-item:hover .app-text-top {
     transform: translateY(0);
 }
+
 .modal-form {
     width: 100%;
     margin-left: auto;
@@ -769,33 +770,66 @@ textarea {
     padding-left: 24px;
     padding-right: 24px;
     padding-bottom: 24px;
-    
-    
 }
-.modal-input {
-    display: flex;
+.form-field {
+    
     justify-content: center;
     border-radius: 4px;
-   width: 360px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+}
+
+.form-text-main {
+    font-weight: 500;
+    text-align: center;
+    padding-top: 72px;
+    margin-bottom: 14px;
+    color: #2E2F42;
+}
+
+.form-input {
+
+    display: flex;
+    justify-content: center;
+    width: 360px;
     height: 40px;
-    
-        border: 1px solid rgba(33, 33, 33, 0.2);
-        margin-bottom: 8px;
-        background-color: transparent;
-        font-size: 16px;
-        color: #2E2F42;
-        padding-left: 38px;
-        
+    font-size: 16px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    background-color: transparent;
+    padding-left: 38px;
+    outline: none;  
 }
 /*За колір плейсхолдера відповідає нижче, 
 за колір введення відповідає інпут*/
-.modal-input::placeholder {
+.form-input::placeholder {
     font-weight: 400;
     font-size: 12px;
     letter-spacing: 0.04em;
     color: rgba(117, 117, 117, 0.5);
     /*padding-top: 8px;
     padding-left: 16px;*/
+}
+.form-input:focus, 
+.form-input:hover{
+    border: 1px solid #4D5AE5;
+}
+.form-relative {
+    position: relative;
+}
+.form-icon {
+    position: absolute;
+    top: 14px;
+    left: 19px;
+    fill: #2E2F42;
+}
+/*коли імпут в фокусі та ховері то сусідній єлемент
+(іконка) також в ховері*/
+.form-input:focus,.form-input:hover+ .form-icon {
+    fill: #4D5AE5;
 }
 /* якщо поля не заповнені і далі не пускає то вони не валідні
 .modal-input:valid {
@@ -808,65 +842,59 @@ textarea {
 .modal-input:not(:placeholder-shown):valid {
     color: rgba(117, 117, 117, 0.5);
 }
+
 .modal-input:not(:placeholder-shown):invalid {
     background-color: rgba(208, 0, 255, 0.224);
 }*/
-/* якщо на твоєму інпуті не показан плейсхолдер і він не в фокусі і він валідний*/
+/* якщо на твоєму інпуті не показан плейсхолдер 
+і він не в фокусі і він валідний
 .modal-input:not(:placeholder-shown):not(:focus):valid {
     background-color: rgba(208, 0, 255, 0.224);
 }
 .modal-input:not(:placeholder-shown):not(:focus):invalid {
     background-color:rgba(28, 180, 53, 0.66);
-}
+}*/
 
 .form-textarea {
+   outline:none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    background-color: transparent; 
     padding-left: 16px;
     padding-top: 8px;
+    height: 120px;
 }
 .form-textarea::placeholder {
     font-weight: 400;
     font-size: 12px;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.04em; 
     color: rgba(117, 117, 117, 0.5);
 }
 
-.form-field {
-    justify-content: center;
-   
-    border-radius: 4px;
-   width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 8px ; 
-}
-.form-text-main {
-    font-weight: 500;
-    text-align: center;
-    padding-top: 72px;
-    margin-bottom: 14px;
-    color: #2E2F42;
-}
-
-.form-text {
+.form-text-label {
     font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 16px;
-        color: #8E8F99;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #8E8F99;
 }
 
-.form-icon {
-    position: absolute;
-    padding-top: 14px ;
-    padding-bottom: 14px;
-    padding-right: 19px;
-}
 .form-btn {
-
-    background: #4D5AE5;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-        border-radius: 4px;
+    display: flex;
+    flex-direction: wrap;
+    font-family: inherit;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    align-items: center;
+    justify-content: center;
+    background-color:#4D5AE5;
+    cursor: pointer;
+    width: 169px;
+    height: 56px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: #FFFFFF;
 }
 .privat-policy {
     color: var(--btn-navigation);
@@ -874,58 +902,55 @@ textarea {
 .form-field label {
     margin-bottom: 4px ;
 }
-.form-field input {
-    
-   
-}
-.form-field input::placeholder {
+
+/*.form-field input::placeholder {
     color: #757575 50%;
     font-size: 16px;
-}
-
-.modal-input:not(:placeholder-shown)
+}*/
 
 /*Subckribe секція у футері*/
 
 .subscribe {
-    display: flex;
-  
+    margin-left: 80px;
 }
-
+.form-buttom {
+    display: flex;
+    gap:24px;
+    
+}
 .subscribe-text {
-
     text-align: center;
-  color: #FFFFFF;
-
-padding-top:8px ;
-padding-bottom: 8px;
-padding-left: 24px;
+    color: #FFFFFF;
+    padding-top:8px ;
+    padding-bottom: 8px;
+    padding-left: 24px;
   
 }   
 .subscribe-input {
-    padding-top: 8px;
-    padding-bottom: 8px;
-
+    padding-left: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: transparent;
+    color:rgba(255, 255, 255, 0.6);
 }
 .btn-subscribe {
     position: relative;
     font-family: inherit;
-        font-weight: 500;
-        color: var(--main-color);
-        letter-spacing: 0.04em;
-       gap: 24px;
-        align-items: center;
-        justify-content: center;
-        background-color: var(--violet-color);
-        border-radius: 4px;
-        border-color: transparent;
-        cursor: pointer;
+    font-weight: 500;
+    color: var(--main-color);
+    letter-spacing: 0.04em;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--violet-color);
+    border-radius: 4px;
+    border-color: transparent;
+    cursor: pointer;
     background: #4D5AE5;
     border-radius: 4px;
     width: 165px;
     height: 40px;
 }
-
 .btn-subscribe:focus,
 .btn-subscribe:hover {
 
