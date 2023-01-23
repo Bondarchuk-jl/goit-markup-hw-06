@@ -871,10 +871,9 @@ textarea {
     letter-spacing: 0.04em; 
     color: rgba(117, 117, 117, 0.5);
 }
-.form-textarea:focus{
-    outline-color: #31D0AA;
+.form-textarea:focus,
+.form-textarea:hover {
     border-color: #404BBF;
-    background-color: #blue;
 }
 .form-text-label {
     font-family: 'Roboto';
