@@ -863,6 +863,7 @@ textarea {
     padding-left: 16px;
     padding-top: 8px;
     height: 120px;
+    resize: none;
 }
 .form-textarea::placeholder {
     font-weight: 400;
@@ -870,7 +871,11 @@ textarea {
     letter-spacing: 0.04em; 
     color: rgba(117, 117, 117, 0.5);
 }
-
+.form-textarea:focus{
+    outline-color: #31D0AA;
+    border-color: #404BBF;
+    background-color: #blue;
+}
 .form-text-label {
     font-family: 'Roboto';
     font-style: normal;
@@ -882,7 +887,7 @@ textarea {
 
 .form-btn {
     display: flex;
-    flex-direction: wrap;
+    
     font-family: inherit;
     font-weight: 500;
     letter-spacing: 0.04em;
@@ -899,25 +904,15 @@ textarea {
 .privat-policy {
     color: var(--btn-navigation);
 }
-.form-field label {
-    margin-bottom: 4px ;
-}
 
-/*.form-field input::placeholder {
-    color: #757575 50%;
-    font-size: 16px;
-}*/
+
 
 /*Subckribe секція у футері*/
 
 .subscribe {
     margin-left: 80px;
 }
-.form-buttom {
-    display: flex;
-    gap:24px;
-    
-}
+
 .subscribe-text {
     text-align: center;
     color: #FFFFFF;
@@ -933,35 +928,37 @@ textarea {
     background-color: transparent;
     color:rgba(255, 255, 255, 0.6);
 }
-.btn-subscribe {
+.subscribe-icon-sp {
     position: relative;
+}
+.btn-subscribe { 
+    display: flex;
     font-family: inherit;
     font-weight: 500;
+    font-size: 16px;
     color: var(--main-color);
     letter-spacing: 0.04em;
-    gap: 16px;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--violet-color);
-    border-radius: 4px;
-    border-color: transparent;
+
+    width: 165px;
+    height: 40px;
+    
     cursor: pointer;
     background: #4D5AE5;
     border-radius: 4px;
-    width: 165px;
-    height: 40px;
+    border-color: transparent;
+    
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 24px;
+    
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-subscribe:focus,
 .btn-subscribe:hover {
-
+   background-color:#404BBF;
 }
 .subscribe-icon {
 position: absolute;
-top: 0;
-left: 0;
-}
-.subscribe-icon-sp {
-   
-    
-
+top: 10px;
+right: 24px;
 }
