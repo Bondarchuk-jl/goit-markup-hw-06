@@ -473,9 +473,9 @@ textarea {
  .buttom::before {
     display: flex;
     content: '';
-    width: ;
+   /* width: ;
     height: ;
-    background-color: ;
+    background-color: ;*/
     background-size: contain;
     margin-right: 10px;
     cursor: pointer;
@@ -719,10 +719,7 @@ textarea {
     background: #404BBF;
     fill: #FFFFFF;
 }
-.modal-close:focus,
-.modal-close:hover +.modal-icon {
-    fill: tomato;
-}*/
+
 
 .modal-icon {
    fill: #000000;
