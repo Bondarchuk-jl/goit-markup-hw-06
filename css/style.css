@@ -719,7 +719,10 @@ textarea {
     background: #404BBF;
     fill: #FFFFFF;
 }
-
+.modal-close:focus,
+.modal-close:hover +.modal-icon {
+    fill: tomato;
+}*/
 
 .modal-icon {
    fill: #000000;
