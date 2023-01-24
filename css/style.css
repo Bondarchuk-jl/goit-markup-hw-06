@@ -276,7 +276,6 @@ ul {
 }
 
 .about-maintext {
-    padding-top: 120px;
     margin-bottom: 72px;
 }
 
@@ -579,6 +578,7 @@ ul {
   }
  .customers {
     padding-bottom: 120px;
+    padding-top: 120px;
  }
 
  .customers-list {
@@ -587,9 +587,7 @@ ul {
     gap: 24px;
  }
 
-.cust{
-    padding-top: 130px;
-}
+
 
  .customers-item {
     width: 168px;
@@ -986,6 +984,8 @@ ul {
 }
 
 .subscribe-input {
+    width: 264px;
+    
     padding-left: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
