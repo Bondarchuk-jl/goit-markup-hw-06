@@ -711,10 +711,16 @@ textarea {
     border-radius: 50%;
     background: var(--bord-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
-    
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-close:focus,
+.modal-close:hover +.modal-icon {
+    background: #404BBF;
+    fill: tomato;
+}
+
 .modal-icon {
-   fill: currentColor;
+   fill: #000000;
 }
 /*зникнення модального вікна*/
 .is-hidden {
@@ -802,6 +808,7 @@ textarea {
     background-color: transparent;
     padding-left: 38px;
     outline: none;  
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*За колір плейсхолдера відповідає нижче, 
 за колір введення відповідає інпут*/
@@ -864,6 +871,7 @@ textarea {
     padding-top: 8px;
     height: 120px;
     resize: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-textarea::placeholder {
     font-weight: 400;
@@ -904,14 +912,22 @@ textarea {
     color: var(--btn-navigation);
 }
 
+.form-text {
+    font-weight: 400;
+    font-size: 12px;
 
+    color: #757575;
+}
 
 /*Subckribe секція у футері*/
 
 .subscribe {
     margin-left: 80px;
 }
-
+.form-buttom {
+    display: flex;
+    gap: 24px;
+}
 .subscribe-text {
     text-align: center;
     color: #FFFFFF;
